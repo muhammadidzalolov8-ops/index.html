@@ -1,1 +1,21 @@
 
+[
+  {
+    "title": "Куртка Premium",
+    "price": "8 990 ₽",
+    "cat": "Куртка",
+    "img": "https://images.unsplash.com/photo-1520975958221-1e3c6b8b1b95?auto=format&fit=crop&w=1400&q=80"
+  },
+  {
+    "title": "Брюки классик",
+    "price": "3 200 ₽",
+    "cat": "Брюки",
+    "img": "https://images.unsplash.com/photo-1520975932431-67b1d8f4b6f0?auto=format&fit=crop&w=1400&q=80"
+  },
+  {
+    "title": "Футболка Oversize",
+    "price": "1 900 ₽",
+    "cat": "Футболка",
+    "img": "https://images.unsplash.com/photo-1520975869365-36a7c3db8f91?auto=format&fit=crop&w=1400&q=80"
+  }
+]
