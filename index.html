@@ -7,14 +7,9 @@
 
   <style>
     :root{
-      --bg:#0b0f19;
-      --text:#0f172a;
-      --muted:#64748b;
       --white:#ffffff;
       --border:rgba(255,255,255,.14);
       --shadow: 0 20px 60px rgba(2,6,23,.45);
-      --radius:18px;
-      --accent:#ffffff;
     }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial}
@@ -41,6 +36,7 @@
       background: rgba(0,0,0,.35);
       backdrop-filter: blur(10px);
       border-bottom:1px solid var(--border);
+      gap:14px;
     }
     .brand{display:flex;gap:12px;align-items:center}
     .logo{
@@ -63,6 +59,7 @@
       border:1px solid var(--border);
       background: rgba(255,255,255,.10);
       color:#fff;font-weight:800;
+      white-space:nowrap;
     }
     .btn:hover{transform:translateY(-1px)}
     .btnSolid{
@@ -204,7 +201,7 @@
           <div class="promoBody">
             <div class="muted">Хит продаж</div>
             <div style="font-weight:900;font-size:18px;margin-top:4px;">Куртка Premium</div>
-            <div class="price">890 сомони</div>
+            <div class="price">8 990 ₽</div>
           </div>
         </div>
       </div>
@@ -231,7 +228,7 @@
       <div class="info3">
         <div class="infoBox">
           <b>Телефон / WhatsApp</b>
-          <div style="color:#64748b" id="phoneText">+992 00 000 0000</div>
+          <div style="color:#64748b" id="phoneText">+7 900 000-00-00</div>
         </div>
         <div class="infoBox">
           <b>Адрес магазина</b>
@@ -251,19 +248,20 @@
   </footer>
 
   <script>
-    // 1) Поставь номер WhatsApp (без пробелов) и адрес
+    // Поставь номер WhatsApp (в международном формате) и адрес:
     const STORE = {
-      phone: "+992000000000",
-      address: "г. ______, ул. ______, дом __",
+      phone: "+79060401234",
+      address: "г. 
+        ______, ул. ______, дом __",
       products: [
-        { title: "Куртка Premium",  price: "890 сомони",  cat: "Куртка", img: "https://images.unsplash.com/photo-1520975958221-1e3c6b8b1b95?auto=format&fit=crop&w=1400&q=80" },
-        { title: "Штаны классик",   price: "320 сомони",  cat: "Штаны",  img: "https://images.unsplash.com/photo-1520975932431-67b1d8f4b6f0?auto=format&fit=crop&w=1400&q=80" },
-        { title: "Костюм (2-ка)",   price: "1490 сомони", cat: "Классик",img: "https://images.unsplash.com/photo-1520975897595-2a6c0b1e8b0c?auto=format&fit=crop&w=1400&q=80" },
-        { title: "Футболка Oversize", price: "190 сомони", cat: "Футболка", img: "https://images.unsplash.com/photo-1520975869365-36a7c3db8f91?auto=format&fit=crop&w=1400&q=80" },
-        { title: "Куртка Street",   price: "760 сомони",  cat: "Куртка",  img: "https://images.unsplash.com/photo-1520975846047-2e71d6d1f1c7?auto=format&fit=crop&w=1400&q=80" },
-        { title: "Штаны (карго)",   price: "390 сомони",  cat: "Штаны",  img: "https://images.unsplash.com/photo-1520975823011-5b2b8f4c3f52?auto=format&fit=crop&w=1400&q=80" },
-        { title: "Пальто Classic",  price: "1190 сомони", cat: "Классик",img: "https://images.unsplash.com/photo-1520975798982-7a82a2a2b1a7?auto=format&fit=crop&w=1400&q=80" },
-        { title: "Худи Minimal",    price: "260 сомони",  cat: "Худи",   img: "https://images.unsplash.com/photo-1520975781184-8a4b46a1d3f1?auto=format&fit=crop&w=1400&q=80" },
+        { title: "Куртка Premium",       price: "8 990 ₽",  cat: "Куртка",   img: "https://images.unsplash.com/photo-1520975958221-1e3c6b8b1b95?auto=format&fit=crop&w=1400&q=80" },
+        { title: "Брюки классик",        price: "3 200 ₽",  cat: "Брюки",    img: "https://images.unsplash.com/photo-1520975932431-67b1d8f4b6f0?auto=format&fit=crop&w=1400&q=80" },
+        { title: "Костюм (двойка)",      price: "14 900 ₽", cat: "Классик",  img: "https://images.unsplash.com/photo-1520975897595-2a6c0b1e8b0c?auto=format&fit=crop&w=1400&q=80" },
+        { title: "Футболка Oversize",    price: "1 900 ₽",  cat: "Футболка", img: "https://images.unsplash.com/photo-1520975869365-36a7c3db8f91?auto=format&fit=crop&w=1400&q=80" },
+        { title: "Куртка Street",        price: "7 600 ₽",  cat: "Куртка",   img: "https://images.unsplash.com/photo-1520975846047-2e71d6d1f1c7?auto=format&fit=crop&w=1400&q=80" },
+        { title: "Брюки (карго)",        price: "3 900 ₽",  cat: "Брюки",    img: "https://images.unsplash.com/photo-1520975823011-5b2b8f4c3f52?auto=format&fit=crop&w=1400&q=80" },
+        { title: "Пальто Classic",       price: "11 900 ₽", cat: "Классик",  img: "https://images.unsplash.com/photo-1520975798982-7a82a2a2b1a7?auto=format&fit=crop&w=1400&q=80" },
+        { title: "Худи Minimal",         price: "2 600 ₽",  cat: "Худи",     img: "https://images.unsplash.com/photo-1520975781184-8a4b46a1d3f1?auto=format&fit=crop&w=1400&q=80" }
       ]
     };
 
@@ -272,16 +270,13 @@
       return `https://wa.me/${STORE.phone.replace(/\\D/g,"")}?text=${msg}`;
     }
 
-    // Top buttons
     document.getElementById("waTop").href  = waLink("Здравствуйте! Хочу узнать наличие и цены.");
     document.getElementById("waHero").href = waLink("Здравствуйте! Хочу заказать одежду. Подскажите по размеру.");
 
-    // Contacts
     document.getElementById("phoneText").textContent = STORE.phone;
     document.getElementById("addrText").textContent  = STORE.address;
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Catalog
     const grid = document.getElementById("grid");
     STORE.products.forEach(p=>{
       const el = document.createElement("div");
