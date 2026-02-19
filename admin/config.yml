@@ -1,0 +1,20 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "products"
+    label: "Товары"
+    folder: "content/products"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Название", name: "title", widget: "string" }
+      - { label: "Цена", name: "price", widget: "string" }
+      - { label: "Категория", name: "category", widget: "string" }
+      - { label: "Фото", name: "image", widget: "image", required: false }
+      - { label: "Описание", name: "description", widget: "text", required: false }
+      - { label: "В наличии", name: "in_stock", widget: "boolean", default: true, required: false }
