@@ -1,0 +1,38 @@
+body{
+font-family:Arial;
+background:#111;
+color:white;
+padding:40px;
+}
+
+.center{
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.login-box{
+background:#222;
+padding:30px;
+border-radius:10px;
+}
+
+input{
+display:block;
+margin:10px 0;
+padding:10px;
+width:200px;
+}
+
+button{
+padding:10px 15px;
+background:#00c896;
+border:none;
+color:white;
+cursor:pointer;
+}
+
+li{
+margin:10px 0;
+}
