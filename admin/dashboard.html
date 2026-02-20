@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Admin Dashboard</h1>
+
+<input id="product" placeholder="Product name">
+<button onclick="addProduct()">ADD</button>
+
+<ul id="list"></ul>
+
+<script>
+
+let products = JSON.parse(localStorage.getItem("products")) || [];
+
+function render(){
+  let list=document.getElementById("list");
+  list.innerHTML="";
+  products.forEach((p,i)=>{
+    list.innerHTML+=`
+      <li>
+        ${p}
+        <button onclick="remove(${i})">Delete</button>
+      </li>`;
+  });
+}
+
+function addProduct(){
+  let val=document.getElementById("product").value;
+  products.push(val);
+  localStorage.setItem("products",JSON.stringify(products));
+  render();
+}
+
+function remove(i){
+  products.splice(i,1);
+  localStorage.setItem("products",JSON.stringify(products));
+  render();
+}
+
+render();
+</script>
+
+</body>
+</html>
